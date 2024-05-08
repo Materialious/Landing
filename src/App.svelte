@@ -100,6 +100,10 @@
   }
 </script>
 
+<svelte:head>
+  <link rel="icon" href={iconOnly} />
+</svelte:head>
+
 <header>
   <nav>
     <img class="large" src={iconOnly} alt="Materialious icon" />
