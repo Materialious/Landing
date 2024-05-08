@@ -1,0 +1,40 @@
+#home-preview {
+    width: 70%;
+}
+
+.markdown h1, .markdown h2 {
+    font-size: 2em;
+}
+
+.markdown h3 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.markdown pre {
+    background-color: var(--background);
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 1em;
+}
+
+.markdown a {
+    color: var(--primary);
+}
+
+.markdown ul {
+    margin-left: 1em;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+    #home-preview {
+        width: 100%;
+    }
+}
