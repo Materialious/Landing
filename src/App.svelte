@@ -108,6 +108,17 @@
   <nav>
     <img class="large" src={iconOnly} alt="Materialious icon" />
     <h5 class="center-align">Materialious</h5>
+
+    <div class="max"></div>
+
+    <a
+      href="https://github.com/Materialious/Materialious"
+      target="_blank"
+      class="button"
+    >
+      <i>code</i>
+      <span>Source code</span>
+    </a>
   </nav>
 </header>
 

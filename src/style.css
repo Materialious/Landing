@@ -37,4 +37,8 @@
     #home-preview {
         width: 100%;
     }
+
+    nav h5 {
+        display: none;
+    }
 }
