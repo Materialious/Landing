@@ -22,6 +22,10 @@
     color: var(--primary);
 }
 
+ul {
+    margin-bottom: 1em;
+}
+
 .markdown ul {
     margin-left: 1em;
 }
