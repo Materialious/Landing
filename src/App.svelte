@@ -8,7 +8,7 @@
 
   const downloadUrl =
     "https://github.com/Materialious/Materialious/releases/download/";
-  const latestVersion = "1.0.11";
+  const latestVersion = "1.1.1";
 
   const platforms = [
     {
