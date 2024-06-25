@@ -8,7 +8,7 @@
 
   const downloadUrl =
     "https://github.com/Materialious/Materialious/releases/download/";
-  const latestVersion = "1.1.1";
+  const latestVersion = "1.1.2";
 
   const platforms = [
     {
@@ -18,37 +18,37 @@
     },
     {
       title: "Windows",
-      file: "Materialious-Setup-1.0.3.exe",
+      file: `Materialious-Setup-${latestVersion}.exe`,
       icon: "window",
     },
     {
       title: "MacOS",
-      file: "Materialious-1.0.3-arm64.dmg",
+      file: `Materialious-${latestVersion}-arm64.dmg`,
       icon: "nutrition",
     },
     {
       title: "Linux Deb",
-      file: "Materialious_1.0.3_amd64.deb",
+      file: `Materialious_${latestVersion}_amd64.deb`,
       icon: "save",
     },
     {
       title: "Linux RPM",
-      file: "Materialious-1.0.3.x86_64.rpm",
+      file: `Materialious-${latestVersion}.x86_64.rpm`,
       icon: "save",
     },
     {
       title: "Linux AppImage",
-      file: "Materialious-1.0.3.AppImage",
+      file: `Materialious-${latestVersion}.AppImage`,
       icon: "save",
     },
     {
       title: "Linux 7z",
-      file: "Materialious-1.0.3.7z",
+      file: `Materialious-${latestVersion}.7z`,
       icon: "save",
     },
     {
       title: "Linux Zip",
-      file: "Materialious-1.0.3.zip",
+      file: `Materialious-${latestVersion}.zip`,
       icon: "save",
     },
   ];
