@@ -1,14 +1,14 @@
 <script lang="ts">
   import { onMount, tick } from "svelte";
   import homePreview from "./assets/home-preview.png";
-  import iconOnly from "./assets/icon-only.png";
+  import iconOnly from "./assets/logo.svg";
 
   import SvelteMarkdown from "svelte-markdown";
   import PageLoading from "./PageLoading.svelte";
 
   const downloadUrl =
     "https://github.com/Materialious/Materialious/releases/download/";
-  const latestVersion = "1.1.7";
+  const latestVersion = "1.1.9";
 
   const platforms = [
     {
@@ -106,7 +106,7 @@
 
 <header>
   <nav>
-    <img class="large" src={iconOnly} alt="Materialious icon" />
+    <img style="height: 50px;" src={iconOnly} alt="Materialious icon" />
     <h5 class="center-align">Materialious</h5>
 
     <div class="max"></div>
