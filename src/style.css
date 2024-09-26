@@ -1,6 +1,5 @@
 #home-preview {
-    width: 70%;
-    max-width: 1920px;
+    width: min(70%, 1920px);
 }
 
 .markdown h1, .markdown h2 {
