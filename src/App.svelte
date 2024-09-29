@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount, tick } from "svelte";
-  import homePreview from "./assets/home-preview.png";
+  import homePreview from "./assets/home-preview.webp";
   import iconOnly from "./assets/logo.svg";
 
   import SvelteMarkdown from "svelte-markdown";
