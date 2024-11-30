@@ -4,8 +4,9 @@ import './style.css';
 
 import "beercss";
 import "material-dynamic-colors";
+import { mount } from "svelte";
 
-const app = new App({
+const app = mount(App, {
   target: document.getElementById('app')!,
 });
 
