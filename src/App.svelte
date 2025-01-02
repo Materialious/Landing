@@ -29,7 +29,7 @@
   function prettyPlatform(platform: string): string {
     if (platform === "darwin") {
       return "Macintosh";
-    } else if (platform.includes("Windows")) {
+    } else if (platform.includes("windows") || platform === "win32") {
       return "Windows";
     }
     return platform;
