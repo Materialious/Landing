@@ -27,9 +27,10 @@
     }
 
     function prettyPlatform(platform: string): string {
+        platform = platform.toLowerCase();
         if (platform === "darwin") {
             return "Macintosh";
-        } else if (platform.includes("windows") || platform === "win32") {
+        } else if (platform === "windows") {
             return "Windows";
         }
         return platform;
