@@ -16,6 +16,20 @@
     let assetsPlatforms: Record<string, any> = $state({});
     let activePlatform: string = $state("");
 
+    const platformExternal: Record<string, Record<string, string>> = {
+        linux: {
+            Flathub: "https://flathub.org/apps/us.materialio.Materialious",
+            Snapcraft: "https://snapcraft.io/materialious",
+        },
+        android: {
+            "F-Droid": "https://f-droid.org/packages/us.materialio.app/",
+            IzzyOnDroid:
+                "https://apt.izzysoft.de/fdroid/index/apk/us.materialio.app",
+            Obtainium:
+                "http://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/Materialious/Materialious",
+        },
+    };
+
     onMount(() => {
         ui("mode", "dark");
         activePlatform =
@@ -30,7 +44,7 @@
         platform = platform.toLowerCase();
         if (platform === "darwin") {
             return "Macintosh";
-        } else if (platform === "windows") {
+        } else if (platform === "windows" || platform === "win32") {
             return "Windows";
         }
         return platform;
@@ -43,22 +57,47 @@
     };
 
     function extractPlatformAndArch(fileName: string): BuildInfo | null {
-        const regex = /([\d.]+)-([^-]+)(?:-([^-]+))?\.(\w+)$/;
+        const regex = /^(.+)\.(\w+(?:\.\w+)?)$/;
         const match = fileName.match(regex);
 
-        if (match) {
-            return {
-                platform: ["apk", "aab"].includes(match[4])
-                    ? "android"
-                    : prettyPlatform(match[2]),
-                arch: ["apk", "aab"].includes(match[4])
-                    ? `x${match[1]}`
-                    : match[3] || undefined,
-                ext: match[4],
-            };
-        } else {
-            return null;
+        if (!match) return null;
+
+        const namePart = match[1];
+        const ext = match[2];
+        const parts = namePart.split("-").map((p) => p.toLowerCase());
+
+        let platform: string = "";
+        let arch: string | undefined;
+
+        // Android builds
+        if (["apk", "aab"].includes(ext)) {
+            platform = "android";
+            arch =
+                parts.find((p) => /^x(86|64)$/.test(p)) ||
+                parts.find((p) => /arm64|armeabi|v8a/.test(p)) ||
+                "universal";
         }
+        // macOS builds
+        else if (parts.includes("darwin")) {
+            platform = "mac";
+            arch = parts.find((p) => /(universal|arm64|x64)/.test(p));
+        }
+        // Linux builds
+        else if (parts.includes("linux")) {
+            platform = "linux";
+            arch = parts.find((p) => /(arm64|x86_64|x64|x86|aarch64)/.test(p));
+        }
+        // Windows builds
+        else if (parts.includes("win32") || parts.includes("win")) {
+            platform = "Windows";
+            arch = parts.find((p) => /(x64|x86|arm64)/.test(p));
+        }
+
+        return {
+            platform,
+            arch,
+            ext,
+        };
     }
 
     async function showApps() {
@@ -212,12 +251,29 @@
                     </a>
                 {/each}
             </nav>
+
             {#each Object.keys(assetsPlatforms) as platform}
                 <div
                     class="page padding"
                     class:active={activePlatform === platform}
                 >
                     <ul>
+                        {#if activePlatform in platformExternal}
+                            {#each Object.entries(platformExternal[activePlatform]) as [name, link]}
+                                <li>
+                                    <a
+                                        href={link}
+                                        target="_blank"
+                                        class="button"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <span>
+                                            {name}
+                                        </span>
+                                    </a>
+                                </li>
+                            {/each}
+                        {/if}
                         {#each assetsPlatforms[platform] as asset}
                             <li>
                                 <a
