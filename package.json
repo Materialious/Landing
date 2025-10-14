@@ -19,7 +19,7 @@
     "vite": "^6.3.4"
   },
   "dependencies": {
-    "beercss": "^3.5.5",
+    "beercss": "^3.12.11",
     "file-icons-js": "github:websemantics/file-icons-js",
     "material-dynamic-colors": "^1.1.0",
     "svelte-exmarkdown": "^4.0.1",

@@ -1,8 +1,15 @@
+a,
+button,
+.button {
+    border-radius: 0.5rem !important;
+}
+
 #home-preview {
     width: min(70%, 1920px);
 }
 
-.markdown h1, .markdown h2 {
+.markdown h1,
+.markdown h2 {
     font-size: 2em;
 }
 
@@ -27,7 +34,6 @@ ul {
     padding-left: 0 !important;
 }
 
-
 .header {
     display: flex;
     flex-direction: column;
@@ -37,7 +43,7 @@ ul {
 
 ul li {
     list-style: none;
-    margin-top: .5em;
+    margin-top: 0.5em;
 }
 
 ul {

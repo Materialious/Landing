@@ -169,31 +169,23 @@
     <link rel="icon" href={iconOnly} />
 </svelte:head>
 
-<header>
-    <nav>
-        <img style="height: 50px;" src={iconOnly} alt="Materialious icon" />
-        <h5 class="center-align">Materialious</h5>
+<nav class="surface-container top">
+    <img style="height: 50px;" src={iconOnly} alt="Materialious icon" />
 
-        <div class="max"></div>
+    <div class="max"></div>
 
-        <a
-            href="https://github.com/Materialious/Materialious"
-            target="_blank"
-            class="button"
-        >
-            <i>code</i>
-            <span>Source code</span>
-        </a>
-    </nav>
-</header>
+    <a
+        href="https://github.com/Materialious/Materialious"
+        target="_blank"
+        class="button"
+    >
+        <i>code</i>
+        <span>Source code</span>
+    </a>
+</nav>
 
 <main class="responsive max">
     <article class="transparent header">
-        <h2>Modern material design for Invidious</h2>
-        <p>
-            Materialious is a privacy respecting frontend for YouTube built
-            ontop of Invidious.
-        </p>
         <img
             id="home-preview"
             src={homePreview}
