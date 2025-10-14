@@ -186,6 +186,15 @@
 
 <main class="responsive max">
     <article class="transparent header">
+        <h1>Welcome to Materialious</h1>
+        <p style="font-size: 1.3em;">
+            Modern material design frontend for Invidious, focused on a clean,
+            privacy-friendly YouTube experience. It supports local video
+            fallback when Invidious fails and is available on Web, Desktop,
+            Android, and Android TV.
+        </p>
+
+        <div class="space"></div>
         <img
             id="home-preview"
             src={homePreview}
