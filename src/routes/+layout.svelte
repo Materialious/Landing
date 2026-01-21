@@ -1,9 +1,14 @@
 <script lang="ts">
 	import 'beercss';
-	import 'material-dynamic-colors';
 	import '$lib/app.css';
+	import ui from 'beercss';
+	import { onMount } from 'svelte';
 
 	let { children } = $props();
+
+	onMount(async () => {
+		await ui();
+	});
 </script>
 
 <svelte:head>
@@ -15,7 +20,11 @@
 
 	<div class="max"></div>
 
-	<a href="https://github.com/Materialious/Materialious" target="_blank" class="button">
+	<a class="button" href="#download">
+		<i>download</i>
+		<span>Download</span>
+	</a>
+	<a href="https://github.com/Materialious/Materialious" target="_blank" class="button secondary">
 		<i>code</i>
 		<span>Source code</span>
 	</a>
