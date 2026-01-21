@@ -275,6 +275,16 @@
 					</a>
 					<div></div>
 					<a
+						href="https://snapcraft.io/materialious"
+						class="button inverse-primary"
+						target="_blank"
+						referrerpolicy="no-referrer"
+					>
+						<i>download</i>
+						<span>Snap</span>
+					</a>
+					<div></div>
+					<a
 						href="https://github.com/Materialious/Materialious/releases/latest/download/Materialious-linux-amd64.deb"
 						class="button inverse-primary"
 						target="_blank"
