@@ -1,0 +1,10 @@
+@font-face {
+	font-family: Inter;
+	src: url('/inter.ttf');
+}
+
+a,
+button,
+.button {
+	border-radius: 0.5rem !important;
+}

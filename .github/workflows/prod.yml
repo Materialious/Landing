@@ -1,14 +1,14 @@
-name: Production Vite workflow
+name: Build Website
 
 on:
   push:
     branches:
-    - main
+      - main
     paths-ignore:
       - '**/README.md'
 
 jobs:
-  build:
+  website-build:
     runs-on: ubuntu-latest
 
     steps:
