@@ -8,3 +8,15 @@ button,
 .button {
 	border-radius: 0.5rem !important;
 }
+
+@media screen and (max-width: 640px) {
+	main {
+		padding: 0;
+	}
+
+	nav.top {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

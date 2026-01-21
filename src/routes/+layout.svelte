@@ -19,9 +19,9 @@
 </svelte:head>
 
 <nav class="surface-container top">
-	<img style="height: 50px;" src="/logo.svg" alt="Materialious icon" />
+	<img class="m l" style="height: 50px;" src="/logo.svg" alt="Materialious icon" />
 
-	<div class="max"></div>
+	<div class="max m l"></div>
 
 	<a class="button" href="#download">
 		<i>download</i>
