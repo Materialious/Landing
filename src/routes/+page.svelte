@@ -29,12 +29,12 @@
 	});
 
 	const features: string[] = [
-		'No ADs',
-		'No Tracking',
+		'No ADs.',
+		'No Tracking.',
 		'Invidious companion support.',
 		'Local video fallback.',
 		'Watch sync parties.',
-		'Cross device progress syncing',
+		'Cross device progress syncing.',
 		'Sponsorblock built-in.',
 		'Return YouTube Dislike built-in.',
 		'Custom colour themes.',
