@@ -13,6 +13,9 @@
 
 <svelte:head>
 	<link rel="icon" href="/logo.svg" />
+	<meta name="keywords" content="invidious,materialious,proxy,youtube,yt,theme,interface,modern" />
+	<meta name="description" content="Modern material design for Invidious." />
+	<title>Materialious - Watch YouTube privately.</title>
 </svelte:head>
 
 <nav class="surface-container top">
