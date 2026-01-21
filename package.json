@@ -31,5 +31,9 @@
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.48.1",
 		"vite": "^7.2.6"
+	},
+	"dependencies": {
+		"beercss": "^3.13.3",
+		"material-dynamic-colors": "^1.1.2"
 	}
 }
