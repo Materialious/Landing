@@ -35,6 +35,6 @@
 	},
 	"dependencies": {
 		"beercss": "^3.13.3",
-		"swiper": "^12.0.3"
+		"swiper": "^12.1.2"
 	}
 }
