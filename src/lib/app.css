@@ -15,8 +15,6 @@ button,
 	}
 
 	nav.top {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		display: none;
 	}
 }

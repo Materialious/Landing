@@ -14,8 +14,11 @@
 <svelte:head>
 	<link rel="icon" href="/logo.svg" />
 	<meta name="keywords" content="invidious,materialious,proxy,youtube,yt,theme,interface,modern" />
-	<meta name="description" content="Modern material design for Invidious." />
-	<title>Materialious - Watch YouTube privately.</title>
+	<meta
+		name="description"
+		content="Modern material design frontend for YouTube & Invidious, focused on a clean, privacy-friendly experience."
+	/>
+	<title>Materialious - Modern material design frontend for YouTube & Invidious.</title>
 </svelte:head>
 
 <nav class="surface-container top">
@@ -23,16 +26,20 @@
 
 	<div class="max m l"></div>
 
-	<a class="button" href="#download">
+	<a href="#download" title="Download" aria-label="Download" style="font-size: 1.5rem">
 		<i>download</i>
-		<span>Download</span>
 	</a>
-	<a href="https://github.com/Materialious/Materialious" target="_blank" class="button secondary">
+	<a
+		href="https://github.com/Materialious/Materialious"
+		target="_blank"
+		title="Source code"
+		aria-label="Source code"
+		style="font-size: 1.5rem"
+	>
 		<i>code</i>
-		<span>Source code</span>
 	</a>
 </nav>
 
-<main class="responsive max">
+<main class="responsive">
 	{@render children()}
 </main>
