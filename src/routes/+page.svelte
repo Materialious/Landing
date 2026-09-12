@@ -497,9 +497,7 @@
 	}
 
 	@media screen and (max-width: 700px) {
-		.callout,
-		.feature-card,
-		.download-card {
+		.callout {
 			border-radius: 0;
 		}
 
